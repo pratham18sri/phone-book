@@ -1,0 +1,36 @@
+# CREATING A PHONEBOOK BY USING DICTONARY
+# ADDING CONTACT 
+cont_add={}
+add_cont=input("type yes to add")
+add_cont.lower()
+if(add_cont=="yes"):
+    no_pers=int(input(" enter number of contacts you want to add=="))
+    for i in range(no_pers+1):
+      name=input(" enter name==")
+      num=input("enter number of a person==")
+      cont_add[name]=num  #adding key and value pairs 
+    print(cont_add)
+  #REMOVING A CONTACT FROM PHONE BOOK
+    rem_c=input("remove for removing contact")
+    rem_c.lower()
+    if(rem_c=="remove"):
+        name=input(" enter name ==")
+        name.lower()
+        if(name in cont_add):
+          cont_add.pop(name)# deleted the thr pair of key
+          cont_add.update()# updated it in which pop key pair not present 
+        print(cont_add)
+      #SEARCH FOR A CONTACT 
+        search_cont=input(" enter name to search")
+        search_cont.lower()
+        if(search_cont in cont_add):
+         print(" yes it present in your phone book")
+        elif():
+         print(" not exist in ypur phone book")
+      #PRINTING ALL CONTACT 
+        all_cont={}
+        all_cont.update(cont_add)# all cont is new dictonary updated with cont_add
+        print(all_cont)
+else:
+    print("invalid input ")
+    print("yes to add")
